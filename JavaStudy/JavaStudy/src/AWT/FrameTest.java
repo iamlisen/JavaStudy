@@ -34,7 +34,7 @@ public class FrameTest {
 		public void actionPerformed(ActionEvent e) {
 			// TODO 自动生成的方法存根
 			System.out.println("点击了确定按钮");
-			tx.setText("点击了确定按钮");
+			tx.setText("你点击了确定按钮");
 		}
 	}
 	
