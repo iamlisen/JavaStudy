@@ -4,6 +4,8 @@ import java.util.List;
 
 public class mainclass {
 
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DBHelper dbHelper = new DBHelper();
@@ -27,6 +29,8 @@ public class mainclass {
 			for(Brand brand:brands) {
 				System.out.println(brand.name);
 			}
+			
+			dbHelper.GetDataByProcedure();
 		} else {
 			System.out.println("数据库连接失败");
 		}

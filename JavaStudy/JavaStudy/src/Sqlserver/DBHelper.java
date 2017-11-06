@@ -106,4 +106,19 @@ public class DBHelper {
 			return null;
 		}
 	}
+	
+	public void GetDataByProcedure() {
+		try {
+			getConnection("sa", "19900629");
+			CallableStatement callableStatement = connection.prepareCall("{call Get_Data(?)}");
+			callableStatement.setInt(1, 1);
+			ResultSet resultSet = callableStatement.executeQuery();
+			while(resultSet.next()) {
+				System.out.println(resultSet.getString("name"));
+			}
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+	}
 }
